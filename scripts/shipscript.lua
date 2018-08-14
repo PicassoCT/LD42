@@ -143,7 +143,10 @@ function script.Create()
 end
 
 function script.Killed(recentDamage, _)
+	center = piece"center"
 	 StartThread(PlaySoundByUnitDefID, myDefID, "sounds/sinkingship.ogg", 0.75, math.random(1000,1500), 1, 0)
+	 Turn(center,x_axis,math.rad(-75),5)
+	 mSyncIn(center,0,-250,0,5000)
 	return 1
 end
 
